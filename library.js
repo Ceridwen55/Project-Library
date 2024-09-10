@@ -1,17 +1,20 @@
 const myLibrary =[];
 
-function Book(title, author, status = 'Unread') //Object constructor
+class Book
 {
+  constructor(title,author,status = 'Unread')
+  {
     this.title = title;
     this.author = author;
     this.status = status;
-}
+  }
 
-Book.prototype.toggleStatus = function()
-{
+  toggleStatus()
+  {
     this.status = (this.status === 'Read') ? 'Unread' : 'Read';
-}
+  }
 
+}
 
 
 function addToLibrary(title,author) // adding the book to the array
